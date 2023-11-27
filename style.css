@@ -1,0 +1,638 @@
+@import url('://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Lobster&family=Work+Sans:ital,wght@1,600&display=swap');
+
+body{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  box-shadow: rgba(14, 55, 54, 0.15) 0px 0px 10px;
+}
+header div{
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo{
+  width: 120px;
+  margin-left: 50px;
+}
+.logo img{
+  width: 170px;
+  margin-top: 10px;
+}
+header .nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 50px;
+}
+header .nav ul{
+  list-style: none;
+}
+header .nav ul li{
+  float: left;
+  padding: 10px;
+}
+header .nav ul li a{
+  text-decoration: none;
+  text-transform: uppercase
+}
+.checkbtn{
+  display: none;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: -20px;
+}
+#check{
+  display: none;
+}
+
+.slider{
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+.slider-box{
+  width: 50%;
+  display: inline-block;
+}
+
+.slider-box h1{
+  font-size: 45px;
+  margin-top: 200px;
+  margin-bottom: 15px;
+}
+.slider-box .animated-text{
+  display: flex;
+  margin-top: 200px;
+}
+.slider-box .static-text{
+  color: black;
+  font-size: 60px;
+  font-weight: 400px;
+  padding-top: 13px;
+  padding-right: 0;
+}
+.slider-box .dynamic-text{
+  margin-left: 15px;
+  line-height: 70px;
+  height: 70px;
+  overflow: hidden;
+  padding-left: 0;
+}
+.dynamic-text li{
+  list-style: none;
+  color: crimson;
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide{
+  100%{
+    top: -280px;
+  }
+}
+.dynamic-text li::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-left: 2px solid crimson;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing{
+  40%,60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+
+.slider-box h1 span{
+  font-size: 30px;
+}
+.slider-box p{
+  text-align: justify;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+.slider-box button{
+  padding: 5px 15px;
+  background: #3F4CE1ED;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.slider-box button:hover{
+  padding: 5px 15px;
+  background: #812727ED;
+  color: white;
+  outline: none;
+  border: none;
+}
+.slider-box img{
+  width: 392px;
+}
+.slider-box .text-3 span{
+  color: crimson;
+  font-weight: 500;
+}
+.about{
+  width: 100%;
+  background: #f5f5f5f5;
+}
+.about-title{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 60px;
+}
+.about-box{
+  width: 50%;
+}
+.about-box img{
+  width: 300px;
+  margin-left: 50px;
+}
+.about-box h1{
+  margin-top: 70px;
+}
+.about-box p{
+  text-align: justify;
+  padding-right: 50px;
+}
+.about-box i{
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius:5px;
+  border: 1px solid;
+  color: blue;
+}
+.about-box i:hover{
+  color: white;
+  background: #440C60;
+}
+.about-box button{
+  padding: 10px 15px;
+  background: #312794ED;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+}
+.about-box button:hover{
+  background: #440C60;
+  color: white;
+}
+.services{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+.services h5{
+  font-size: 35px;
+  margin: 0;
+  margin-top: 50px;
+}
+.s-container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.service-box{
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  flex-flow: column;
+  margin-right: 20px;
+  border: 1px solid #440C60;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+}
+.service-box i{
+  font-size: 50px;
+}
+.service-box p{
+  font-weight: normal;
+  margin: 0;
+}
+.service-box:hover{
+  background: #4A0270;
+  color: white;
+}
+.skills{
+  background: #E7F1F294;
+  padding-top: 30px;
+}
+.skills h5{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.skills-bar{
+  margin-bottom: 50px;
+}
+
+.skills-bar h2{
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.progress-bar{
+  background: #959595;
+  width: 400px;
+  height: 10px;
+  border-radius: 5px;
+}
+.progress-bar div{
+  height: 10px;
+  width: 0%;
+  border-radius: 5px;
+  background: red;
+}
+.progress-bar div span{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: mediumslateblue;
+  float: right;
+  margin-top: -15px;
+  margin-right: -20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.progress-bar .html{
+  background: rebeccapurple;
+  animation: html 1s linear forwards;
+}
+.progress-bar .css{
+  background-color: blue;
+  animation: css 1s linear forwards;
+}
+.progress-bar .javascript{
+  background: tomato;
+  animation: javascript 1s linear forwards;
+}
+.progress-bar .payton{
+  background: green;
+  animation: payton 1s linear forwards;
+}
+@keyframes html{
+  100%{
+    width: 90%;
+  }
+}
+@keyframes css{
+  100% {
+    width: 80%;
+  }
+}
+@keyframes javascript{
+  100% {
+    width: 75%;
+  }
+}
+@keyframes payton{
+  100% {
+    width: 50%;
+  }
+}
+
+.statistics{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: crimson;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+}
+.s-box{
+  margin: 10px 60px;
+  text-align: center;
+}
+.s-box h1{
+  margin: 0;
+  font-size: 35px;
+}
+.s-box p{
+  font-weight: bold;
+}
+.project{
+  width: 100%;
+  height: auto;
+}
+.pro-title{
+  width: 100%;
+  text-align: center;
+}
+.pimg{
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.pro-box{
+  width: 200px;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.pro-box picture img{
+  width: 200px;
+}
+
+.pro-box picture img:hover{
+  opacity:0.50;
+}
+
+footer{
+  width: 100%;
+  background: black;
+  color: white;
+  padding-bottom: 50px;
+}
+footer .foot{
+  width: 90%;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .foot .foot1{
+  width: 30%;
+}
+footer .foot .foot1 button{
+  background: #B354E6;
+  color: white;
+  margin-left: 0;
+  border: none;
+  padding: 5px;
+  border-radius: 0px 15px 15px 0px;
+  outline: none;
+  margin-left: none;
+}
+footer .foot .foot1 i{
+  font-size: 25px;
+  padding: 5px;
+}
+footer .foot .foot1 p{
+  display: flex;
+  font-size: 20px;
+  margin-top: 15px;
+}
+footer .foot .foot1 p i{
+  margin-right: 10px;
+  border: none;
+  background: none;
+  color: #00d215;
+}
+footer .foot .foot1 i{
+  border: 1px solid white;
+  background: crimson;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+footer .foot .foot1 i:hover{
+  background: #720404;
+}
+footer .foot .foot1 input{
+  border-radius: 15px 0px 0px 15px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+footer .copyright-container{
+  width: 100%;
+  height: 15px;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin-top: 50px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+footer .copyright-container a{
+ text-decoration: none;
+ color: white;
+}
+
+
+
+
+
+
+@media (max-width: 360px){
+  header{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    box-shadow: rgba(14, 55, 54, 0.15) 0px 0px 10px;
+  }
+  header .logo{
+    margin-left: 10px;
+    padding: 10px;
+  }
+ .checkbtn{
+   display: block;
+ }
+header .nav ul{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  top: 54px;
+  left: -170%;
+  transition: all .1s;
+}
+header .nav ul li{
+  line-height: 30px;
+  clear: both;
+  margin-top: 15px;
+}
+#check:checked ~ ul{
+  left: 0;
+}
+header .nav ul li a{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.slider{
+  width: 90%;
+  display: inline-block;
+  margin-left: 20px;
+}
+.slider-box{
+  width: 100%;
+  display: block;
+}
+.slider-box h1{
+  margin-top: 100px;
+}
+.slider-box img{
+  width: 300px;
+}
+
+.slider-box .animated-text{
+  display: flex;
+  margin-top: 100px;
+}
+.slider-box .static-text{
+  color: black;
+  font-size: 50px;
+  font-weight: 400px;
+  padding-top: 20px;
+  padding-right: 0;
+}
+.slider-box .dynamic-text{
+  margin-left: 15px;
+  line-height: 70px;
+  height: 70px;
+  overflow: hidden;
+  padding-left: 0;
+}
+.dynamic-text li{
+  list-style: none;
+  color: crimson;
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide{
+  100%{
+    top: -280px;
+  }
+}
+.dynamic-text li::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-left: 0px solid crimson;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing{
+  40%,60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+
+.container{
+  width: 90%;
+  display: inline-block;
+  margin-left: 5%;
+}
+.about{
+  width: 100%;
+}
+
+.about-box{
+  width: 100%;
+  display: inline-block;
+}
+.about-box img{
+  width: 324px;
+  margin-left: 0;
+}
+.about-box p{
+  padding-right: 0;
+}
+
+.s-container{
+  display: inline-block;
+}
+.service-box{
+  width: 100%;
+}
+.progress-bar{
+  width: 300px;
+}
+.skills-bar img{
+  width: 300px;
+}
+.pimg{
+  width: 90%;
+}
+.pro-box{
+  width: 300px;
+  margin-bottom: 100px;
+}
+.pro-box picture img{
+  width: 300px;
+}
+footer{
+  width: 100%;
+  display: inline-block;
+}
+footer .foot{
+  width: 90%;
+  display: inline-block;
+  margin-left: 5%;
+}
+footer .foot .foot1{
+  width: 100%;
+}
+
+
+}
+
+
