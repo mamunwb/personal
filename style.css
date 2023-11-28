@@ -470,7 +470,7 @@ footer .copyright-container a{
 
 
 
-@media (max-width: 360px){
+@media (max-width: 768px){
   header{
     position: fixed;
     width: 100%;
