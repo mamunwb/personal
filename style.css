@@ -529,9 +529,9 @@ header .nav ul li a{
 }
 .slider-box .static-text{
   color: black;
-  font-size: 10px;
+  font-size: 50px;
   font-weight: 400px;
-  padding-top: 29px;
+  padding-top: 13px;
   padding-right: 0;
 }
 .slider-box .dynamic-text{
